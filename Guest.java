@@ -1,5 +1,3 @@
-package store;
-
 public class Guest extends customer {
     private boolean isGuest; // Flag to indicate guest mode
 
