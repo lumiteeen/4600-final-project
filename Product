@@ -1,26 +1,24 @@
+import java.util.Objects;
+
 public class Product {
     private int productId;
     private String name;
     private String group;
     private double price;
     private double discountedPrice;
-    private String size;
-    private String color;
     private int quantity;
 
-    // Constructors
-    public Product(int productId, String name, String group, double price, double discountedPrice, String size, String color, int quantity) {
+    public Product(int productId, String name, String group, double price, double discountedPrice, int quantity) {
         this.productId = productId;
         this.name = name;
         this.group = group;
         this.price = price;
         this.discountedPrice = discountedPrice;
-        this.size = size;
-        this.color = color;
         this.quantity = quantity;
     }
 
-    // Getters and Setters
+    // Getters and setters
+
     public int getProductId() {
         return productId;
     }
@@ -61,27 +59,42 @@ public class Product {
         this.discountedPrice = discountedPrice;
     }
 
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public int getQuantity() {
         return quantity;
     }
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    // Additional methods
+
+    public boolean isAvailable() {
+        return quantity > 0;
+    }
+
+    public double calculateTotalPrice(int quantity) {
+        double totalPrice = price * quantity;
+        if (discountedPrice < price) {
+            totalPrice = discountedPrice * quantity;
+        }
+        return totalPrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return productId == product.productId &&
+                Double.compare(product.price, price) == 0 &&
+                Double.compare(product.discountedPrice, discountedPrice) == 0 &&
+                Objects.equals(name, product.name) &&
+                Objects.equals(group, product.group);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productId, name, group, price, discountedPrice);
     }
 }
