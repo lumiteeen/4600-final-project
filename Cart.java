@@ -51,7 +51,7 @@ public class Cart {
 public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
-        
+        Product shirt1 = new Product(1001, "Supreme Red T-shirt", "Supreme", 49.99, 39.99, 1500);
 
         do {
             System.out.println("The MIST store:");
