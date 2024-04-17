@@ -52,6 +52,9 @@ public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
         Product shirt1 = new Product(1001, "Red T-shirt with logo", "Supreme", 49.99, 39.99, 1500);
+        Product shirt2 = new Product(1002, "Blue original logo", "Vans", 29.99, 19.99, 1500);
+        Product shoe1 = new Product(1003, "Jordan 1's", "Nike", 139.99, 99.99, 1500);
+        Product shoe2 = new Product(1004, "Panda Dunks", "Nike", 99.99, 69.99, 1500);
 
         do {
             System.out.println("The MIST store:");
