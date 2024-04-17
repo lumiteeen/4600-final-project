@@ -79,31 +79,11 @@ public class customer {
         System.out.println("Registration successful!");
     }
 
-    // Method to search for products
-    public void searchProducts() {
-        if (isLoggedIn) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter the product name to search for: ");
-            String productName = scanner.nextLine();
-
-            if (products.containsKey(productName)) {
-                System.out.println("Searching for products...");
-                System.out.println("Product found! Price: $" + products.get(productName));
-            } else {
-                System.out.println("Searching for products...");
-                System.out.println("Product not found.");
-            }
-
-            scanner.close();
-        } else {
-            System.out.println("Please log in first.");
-        }
-    }
 
     // Method to add items to cart
     public void addItems() {
         if (isLoggedIn) {
-            // Implementation of adding items to cart
+            
             System.out.println("Adding items to cart...");
         } else {
             System.out.println("Please log in first.");
@@ -139,9 +119,11 @@ public class customer {
             this.address = newAddress;
 
             System.out.println("Details updated successfully!");
+            scanner.close();
         } else {
             System.out.println("Please log in first.");
         }
+       
     }
 
     // Method to make payment
