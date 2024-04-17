@@ -82,8 +82,19 @@ public class customer {
     // Method to search for products
     public void searchProducts() {
         if (isLoggedIn) {
-            // Implementation of searching products
-            System.out.println("Searching for products...");
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter the product name to search for: ");
+            String productName = scanner.nextLine();
+
+            if (products.containsKey(productName)) {
+                System.out.println("Searching for products...");
+                System.out.println("Product found! Price: $" + products.get(productName));
+            } else {
+                System.out.println("Searching for products...");
+                System.out.println("Product not found.");
+            }
+
+            scanner.close();
         } else {
             System.out.println("Please log in first.");
         }
