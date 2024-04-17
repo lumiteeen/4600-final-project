@@ -103,7 +103,7 @@ public class Product {
         StringBuilder description = new StringBuilder();
         description.append("Product ID: ").append(productId).append("\n");
         description.append("Name: ").append(name).append("\n");
-        description.append("Group: ").append(group).append("\n");
+        description.append("Brand: ").append(group).append("\n");
         description.append("Price: $").append(price).append("\n");
         description.append("Discounted Price: $").append(discountedPrice).append("\n");
         description.append("Quantity: ").append(quantity).append("\n");
