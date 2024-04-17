@@ -51,6 +51,7 @@ public class Cart {
 public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
+        
 
         do {
             System.out.println("The MIST store:");
@@ -62,8 +63,8 @@ public static void main(String[] args) {
 
             switch (choice) {
                 case 1:
-                    System.out.println("You chose Option A");
-                    // Perform action for Option A
+                    System.out.println("You chose Browse Products");
+                    
                     break;
                 case 2:
                     System.out.println("You chose Option B");
