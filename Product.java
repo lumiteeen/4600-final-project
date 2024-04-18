@@ -1,3 +1,4 @@
+package mistFinal;
 import java.util.Objects;
 
 public class Product {
