@@ -1,3 +1,4 @@
+package mistFinal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -49,6 +50,7 @@ public class Customer {
             if (inputEmail.equals(credentials.getEmail()) && password.equals(credentials.getPassword())) {
                 isLoggedIn = true;
                 System.out.println("Logged in successfully!");
+                System.out.println();
                 return;
             }
         }
@@ -80,6 +82,7 @@ public class Customer {
         // If the email ID is not registered, add new credentials
         validCredentials.add(new LoginCredentials(emailId, password));
         System.out.println("Registration successful!");
+        System.out.println();
     }
 
 

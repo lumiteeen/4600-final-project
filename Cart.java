@@ -1,3 +1,4 @@
+package mistFinal;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 import java.util.ArrayList;
@@ -102,13 +103,15 @@ public class Cart {
 
                 switch (choice) {
                     case 1:
-                        System.out.println("You chose Browse Products");
+                        System.out.println();
+                    	System.out.println("You chose Browse Products");
                         for (Product prd : products) {
                             System.out.println(prd.generateDescription());
                         }
                         break;
                     case 2:
-                        System.out.println("You chose Add to Cart");
+                    	System.out.println();
+                    	System.out.println("You chose Add to Cart");
                         System.out.print("Enter the product ID to add to cart: ");
                         int productId = scanner.nextInt();
                         // Find the product by ID and add it to the cart
@@ -123,30 +126,37 @@ public class Cart {
                         if (!found) {
                             System.out.println("Product not found!");
                         }
+                        System.out.println();
                         break;
                     case 3:
-                        System.out.println("You chose View Cart");
+                    	System.out.println();
+                    	System.out.println("You chose View Cart");
                         cart.displayCart();
                         break;
                     case 4:
-                        System.out.println("You chose Checkout");
+                    	System.out.println();
+                    	System.out.println("You chose Checkout");
                         double totalPrice = cart.calculateTotalPrice();
                         System.out.println("Total Price: $" + totalPrice);
                         // Perform action for Checkout
                         break;
                     case 5:
+                    	System.out.println();
                     	System.out.println("You chose Login");
                     	cart.customer.login();
                     	break;
                     case 6:
+                    	System.out.println();
                     	System.out.println("You chose Register");
                     	Customer.register();
                     	break;
                     case 7:
-                        System.out.println("Exiting...");
+                    	System.out.println();
+                    	System.out.println("Exiting...");
                         break;
                     default:
-                        System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                    	System.out.println();
+                    	System.out.println("Invalid choice. Please enter a number between 1 and 5.");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number.");
