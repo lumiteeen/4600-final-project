@@ -1,4 +1,3 @@
-package mistFinal;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 import java.util.ArrayList;
