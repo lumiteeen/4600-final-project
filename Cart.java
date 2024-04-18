@@ -76,7 +76,7 @@ public static void main(String[] args) {
                     }
                     break;
                 case 2:
-                    System.out.println("You chose Option B");
+                    System.out.println("You chose checkout");
                     // Perform action for Option B
                     break;
                 case 3:
